@@ -68,6 +68,12 @@ app.get('/home',(request,response)=>{
     }
   );
 });
+
+app.get('/projects',(request , response)=>{
+  response.render('projects.hbs',{
+    pageTitle:'Projects'
+  });
+});
 // Port for developing locally
 app.listen(port , ()=>{
   console.log(`Server is up on port ${port}`);
